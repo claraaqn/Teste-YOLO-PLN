@@ -5,8 +5,9 @@ import math
 # Load a model (substitua 'yolov8n.pt' pelo caminho do seu modelo)
 model = YOLO('yolov8n.pt')  
 
+stream = 'http://192.168.10.7:4747/video'
 # Iniciar captura de vídeo da câmera
-cap = cv2.VideoCapture(0)  # 0 indica a câmera padrão
+cap = cv2.VideoCapture(stream)  # 0 indica a câmera padrão
 cap.set(3, 640)
 cap.set(4, 480)
 
